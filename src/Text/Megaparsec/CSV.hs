@@ -1,4 +1,15 @@
-module Text.Megaparsec.CSV where
+-- |
+-- Module      : Text.Megaparsec.CSV
+-- Description : Parsec CSV files with optional escape characters using megaparsec
+-- Copyright   : [2025] Noah Martin Williams
+-- License     : BSD3
+--
+-- Maintainer  : Noah Martin Williams <noahmartinwilliams@gmail.com>
+-- Stability   : experimental
+-- Portability : portable
+--
+-- This module contains the csv function.
+module Text.Megaparsec.CSV(csv, CSVParser) where
 
 import Control.Monad
 import Data.Void
@@ -51,5 +62,7 @@ csvLine sep escape = do
     void $ eol'
     return ret
 
+-- | The CSV parser. The first argument is the seperator and the second argument is the optional escape character. 
+--
 csv :: Char -> Maybe Char -> CSVParser [[String]]
 csv seperator escape = manyTill (csvLine seperator escape) eof

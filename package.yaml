@@ -11,12 +11,9 @@ extra-source-files:
 - CHANGELOG.md
 
 # Metadata used when publishing your package
-# synopsis:            Short description of your package
+# synopsis:            A simple megaparsec library for CSV files with optional escape characters.
 # category:            Web
 
-# To avoid duplicated efforts in documentation and dealing with the
-# complications of embedding Haddock markup inside cabal files, it is
-# common to point users to the README.md file.
 description:         A Simple megaparsec library for parsing CSV data with optional escape characters.
 
 dependencies:
@@ -39,13 +36,3 @@ library:
   - megaparsec
 
 
-tests:
-  megaparsec-csv-test:
-    main:                Spec.hs
-    source-dirs:         test
-    ghc-options:
-    - -threaded
-    - -rtsopts
-    - -with-rtsopts=-N
-    dependencies:
-    - megaparsec-csv
