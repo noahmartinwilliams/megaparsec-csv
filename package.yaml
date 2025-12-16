@@ -5,6 +5,8 @@ license:             BSD-3-Clause
 author:              "Noah Martin Williams"
 maintainer:          "noahmartinwilliams@gmail.com"
 copyright:           "GPL"
+category:            "Parsing"
+synopsis:            "A megaparsec library for CSV files."
 
 extra-source-files:
 - README.md
@@ -33,6 +35,6 @@ ghc-options:
 library:
   source-dirs: src
   dependencies:
-  - megaparsec
+  - megaparsec >= 9.6
 
 

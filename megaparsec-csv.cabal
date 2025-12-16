@@ -6,7 +6,9 @@ cabal-version: 2.2
 
 name:           megaparsec-csv
 version:        0.1.0.0
+synopsis:       A megaparsec library for CSV files.
 description:    A Simple megaparsec library for parsing CSV data with optional escape characters.
+category:       Parsing
 homepage:       https://github.com/noahmartinwilliams/megaparsec-csv#readme
 bug-reports:    https://github.com/noahmartinwilliams/megaparsec-csv/issues
 author:         Noah Martin Williams
@@ -35,20 +37,5 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
-    , megaparsec
-  default-language: Haskell2010
-
-test-suite megaparsec-csv-test
-  type: exitcode-stdio-1.0
-  main-is: Spec.hs
-  other-modules:
-      Paths_megaparsec_csv
-  autogen-modules:
-      Paths_megaparsec_csv
-  hs-source-dirs:
-      test
-  ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints -threaded -rtsopts -with-rtsopts=-N
-  build-depends:
-      base >=4.7 && <5
-    , megaparsec-csv
+    , megaparsec >=9.6
   default-language: Haskell2010
