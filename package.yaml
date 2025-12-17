@@ -1,5 +1,5 @@
 name:                megaparsec-csv
-version:             0.1.0.0
+version:             0.2.1
 github:              "noahmartinwilliams/megaparsec-csv"
 license:             BSD-3-Clause
 author:              "Noah Martin Williams"
@@ -35,6 +35,8 @@ ghc-options:
 library:
   source-dirs: src
   dependencies:
-  - megaparsec >= 9.6
+  - megaparsec >= 9.6 && < 10
+  - bytestring
+  - text
 
 

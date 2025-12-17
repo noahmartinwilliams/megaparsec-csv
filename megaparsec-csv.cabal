@@ -5,7 +5,7 @@ cabal-version: 2.2
 -- see: https://github.com/sol/hpack
 
 name:           megaparsec-csv
-version:        0.1.0.0
+version:        0.2.1
 synopsis:       A megaparsec library for CSV files.
 description:    A Simple megaparsec library for parsing CSV data with optional escape characters.
 category:       Parsing
@@ -37,5 +37,7 @@ library
   ghc-options: -Wall -Wcompat -Widentities -Wincomplete-record-updates -Wincomplete-uni-patterns -Wmissing-export-lists -Wmissing-home-modules -Wpartial-fields -Wredundant-constraints
   build-depends:
       base >=4.7 && <5
-    , megaparsec >=9.6
+    , bytestring
+    , megaparsec >=9.6 && <10
+    , text
   default-language: Haskell2010
